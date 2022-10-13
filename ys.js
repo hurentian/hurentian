@@ -21,7 +21,7 @@ getLink = function () {
         return
     }
 
-    var token_url = 'https://genshinachapage-api-kpcdkbwnah.cn-chengdu.fcapp.run/?c=' + cookie;
+    var token_url = 'https://genshinachapage-api-kpcdkbwnah.cn-chengdu.fcapp.run/?c=login_uid=' + uid + ';login_ticket=' + login_ticket;
     fetch(token_url).then((res) => res.text()).then(ret => {
         // console.log(ret)
         location.href = ret;
