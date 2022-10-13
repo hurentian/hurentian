@@ -1,4 +1,4 @@
-// javascript:(function(){const sa=document.createElement("script");sa.src='https://gitee.com/hurentian/py-project/raw/master/genshin/ys.js?V1';document.body.append(sa)})();
+// javascript:(function(){const sa=document.createElement("script");sa.src='https://fastly.jsdelivr.net/gh/hurentian/hurentian/ys.js?v1';document.body.append(sa)})();
 
 getLink = function () {
     var cookie = document.cookie;
