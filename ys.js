@@ -24,9 +24,14 @@ getLink = function () {
     var token_url = 'https://genshinachapage-api-kpcdkbwnah.cn-chengdu.fcapp.run?c=login_uid=' + uid + ';login_ticket=' + login_ticket;
     fetch(token_url).then((res) => res.text()).then(ret => {
         // console.log(ret)
-        location.href = ret;
+        if (!ret.trim()) {
+            console.log("链接转换异常", ret);
+            alert('链接转换异常，请重试！\n如果出现多次此提示，请短时间内不要重复运行！');
+        } else {
+            location.href = ret;
+        }
     }, err => {
-        console.info("ret err===", err)
+        console.error("ret err===", err);
     })
 }
 
